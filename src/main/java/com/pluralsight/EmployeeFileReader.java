@@ -1,12 +1,12 @@
-package com.pruralsight;
+package com.pluralsight;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
 
-public class Main {
-    public static void main(String[] args) throws InterruptedException {
+public class EmployeeFileReader {
+    public static Employee[] readEmployeeFromFile() {
         Employee[] employees = new Employee[20];
         int index = 0;
 
@@ -27,24 +27,16 @@ public class Main {
                 employees[index] = new Employee(id, name, hoursWorked, payRate);
                 index++;
 
-                // System.out.println(lines1);
-                // System.out.println(split[0]);
             }
 
         } catch (IOException e) {
             System.out.println("ERROR:  An unexpected error occurred");
 
             e.printStackTrace();
-        }
-        for (int i = 0; i < index; i++) {
-            System.out.printf("%d | %s | $%.2f%n",
-                    employees[i].getEmployeeId(),
-                    employees[i].getName(),
-                    employees[i].getGrossPay());
-                    Thread.sleep(1000);
-        }
+        } return employees;
     }
 }
+
 
 
 

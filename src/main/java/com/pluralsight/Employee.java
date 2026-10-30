@@ -1,4 +1,4 @@
-package com.pruralsight;
+package com.pluralsight;
 
 
 public class Employee {
@@ -45,4 +45,8 @@ public class Employee {
     public double getGrossPay(){
         return hoursWorked * payRate;
     }
+
+
 }
+
+
